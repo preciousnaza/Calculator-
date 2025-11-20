@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator{
+    background-color: #0f1115;
+    width: 250px;
+    height: 70vh;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+input{
+    width: 230px;
+    height: 12vh;
+    margin: 10px;
+    padding: 5px;
+    font-size: 22px;
+    border: none;
+    outline: none;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.row .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    background: #1f222a;
+    border-radius: 13px ;
+    box-shadow: 
+    inset 6px 6px 12px #14161b,
+    inset -6px -6px 12px #2b2f36,
+    6px 6px 12px #0d0e12,
+    -6px -6px 12px #2b2f36;
+
+    transition: 0.15s ease;
+}
+
+.row .orange{
+    background:linear-gradient(145deg,#ff8a00, #e06f00) ;
+    box-shadow: 
+    inset 6px 6px 12px #9b4c00,
+    inset -6px -6px 12px  #ffb05e,
+    6px 6px 12px #0d0e12,
+    -6px -6px  12px #3a3b3c;
+
+    transition: 0.15s ease;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+@media (max-width:330px) {
+    .calculator{
+        width: 180px;
+        height: 50vh;
+    }
+    input {
+        width: 170px;
+        height: 10vh;
+    }
+.row .btn {
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 6px 6px 12px #14161b, inset -6px -6px 12px #2b2f36, 6px 6px 12px #0d0e12, -6px -6px 12px #2b2f36;
+}
+.row .orange {
+    background: linear-gradient(145deg,#ff8a00, #e06f00);
+    box-shadow: inset 6px 6px 12px #9b4c00, inset -6px -6px 12px #ffb05e, 6px 6px 12px #0d0e12, -6px -6px 12px #3a3b3c;
+    transition: 0.15s ease;
+}
+}
